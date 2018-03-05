@@ -46,8 +46,6 @@
 			}
 			.imgWrap {
 				margin: 0 auto 30px;
-				width: 480px;
-				height: 480px;
 				overflow: hidden;
 			}
 			.range {
@@ -65,7 +63,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<canvas id="canvas" width="480" height="480" style="display:none;"></canvas>
+			<canvas id="canvas" style="display:none;"></canvas>
 			<h1>グリッチレンジ</h1>
 			<div class="imgWrap"><img id="glitch"></div>
 			<div class="range">
@@ -73,6 +71,8 @@
 				<output id="rangevalue">0.5</output>
 				<input id="stop" type="button" value="STOP" onclick="stopTimer()">
 				<input id="start" type="button" value="RESTART" onclick="startTimer()" disabled="disabled">
+				<input id="upload" type="file" name="file">
+				<button id="submit" type="button" onclick="upload()" accept="image/*">出力</button>
 			</div>
 		</div>
 		<script src="js/glitch.js"></script>
