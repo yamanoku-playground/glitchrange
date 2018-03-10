@@ -83,8 +83,8 @@ document.getElementById("range").addEventListener(
 
 let baseSource;
 image.onload = () => {
-  canvas.width = THUMBWIDTH;
-  canvas.height = THUMBHEIGHT;
+  canvas.width = image.width;
+  canvas.height = image.height;
   ctx.drawImage(image, 0, 0);
   baseSource = canvas
     .toDataURL("image/jpeg")
@@ -141,7 +141,7 @@ objFile.addEventListener(
     if (!file.type.match(/^image\/(png|jpeg|gif)$/)) return;
     const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = function() {
+    reader.onloadend = function() {
       dataUrl = reader.result;
     };
   },
