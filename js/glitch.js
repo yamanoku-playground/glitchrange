@@ -157,3 +157,15 @@ function upload() {
     return false;
   }
 }
+
+document.onkeydown = e => {
+  if(e.keyCode === 65){
+    stopTimer();
+  } else if (e.keyCode === 83) {
+    startTimer();
+  } else if (e.keyCode === 88) {
+    upload();
+  } else if (e.keyCode === 90) {
+    document.getElementById("upload").click();
+  }
+};
