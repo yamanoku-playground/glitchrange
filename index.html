@@ -11,21 +11,13 @@
 			}
 			html {
 				background: #fd8ffd;
-				background: -moz-linear-gradient(-45deg, #fd8ffd 0%, #9a40d6 45%, #72fffe 100%);
-				background: -webkit-linear-gradient(-45deg, #fd8ffd 0%,#9a40d6 45%,#72fffe 100%);
 				background: linear-gradient(135deg, #fd8ffd 0%,#9a40d6 45%,#72fffe 100%);
 			}
 			body {
 				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQYV2NkQAL///9PY4TxwRxGxllgARgHxGZE5oAEAPm3D2hsLeiBAAAAAElFTkSuQmCC) repeat;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
 				bottom: 0;
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
-				-webkit-box-pack: center;
-				-ms-flex-pack: center;
+				align-items: center;
 				justify-content: center;
 			}
 			.container {
@@ -47,10 +39,11 @@
 			.imgWrap {
 				margin: 0 auto 30px;
 				overflow: hidden;
-				max-width: 480px;
+				width: 480px;
+				height: 480px;
 			}
 			.imgWrap img {
-				width: 100%;
+				max-width: 100%;
 				height: auto;
 			}
 			.range {
@@ -70,7 +63,7 @@
 		<div class="container">
 			<canvas id="canvas" style="display:none;"></canvas>
 			<h1>グリッチレンジ</h1>
-			<div class="imgWrap"><img id="glitch"></div>
+			<div class="imgWrap"><img id="glitch" src="" width="480" height="480" alt=""></div>
 			<div class="range">
 				<input id="range" type="range" min="0" max="0.9995" step="0.0005" onchange="rangevalue.value=value" />
 				<output id="rangevalue">0.5</output>
